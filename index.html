@@ -438,47 +438,14 @@ style="left:88%;font-size:24px;animation-delay:3s">
 ========================= */
 
 const lyrics = [
-
-  {
-    time:0,
-    text:"Main likh doon aasmaan par ye"
-  },
-
-  {
-    time:9,
-    text:"Ke padh lega jahaan saara"
-  },
-
-  {
-    time:13,
-    text:"Huaa na hoga ab koi"
-  },
-
-  {
-    time:18,
-    text:"Yahan hum do sa dobara"
-  },
-
-  {
-    time:23,
-    text:"Main duniya bhar ki taarifein"
-  },
-
-  {
-    time:28,
-    text:"Tere sajde mein laaya hoon"
-  },
-
-  {
-    time:32,
-    text:"Main tumse ishq karne ki"
-  },
-
-  {
-    time:37,
-    text:"Ijaazat, Rab se laaya hoon"
-  }
-
+  { time: 0,  text: "Main likh doon aasmaan par ye" },
+  { time: 12, text: "Ke padh lega jahaan saara" },
+  { time: 15, text: "Huaa na hoga ab koi" },
+  { time: 18, text: "Yahan hum do sa dobara" },
+  { time: 23, text: "Main duniya bhar ki taarifein" },
+  { time: 26, text: "Tere sajde mein laaya hoon" },
+  { time: 30, text: "Main tumse ishq karne ki" },
+  { time: 33, text: "Ijaazat, Rab se laaya hoon" }
 ];
 
 
@@ -600,30 +567,27 @@ audio.addEventListener(
 );
 
 
-/* =========================
-   YES BUTTON
-========================= */
+<button class="yes" onclick="yesClicked()">
+  💖 Yes, I choose you
+</button>
+
+<button class="think" onclick="thinkClicked()">
+  Let me think 🙈
+</button>
 
 function yesClicked(){
 
-  const phone =
-    "8801609223346";
+  const phone = "8801609223346";
 
   const message =
-    "Yes, I love you ❤️";
+    "Hey ❤️ I saw your proposal page... 💖 Yes, I choose you 💗";
 
   window.location.href =
     "https://wa.me/" +
     phone +
     "?text=" +
     encodeURIComponent(message);
-
 }
-
-
-/* =========================
-   THINK BUTTON
-========================= */
 
 function thinkClicked(){
 
