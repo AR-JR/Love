@@ -253,6 +253,247 @@ button:hover{
 
 const lyrics = [
 
+  {time:8,text:"Main likh doon aasmaan par ye"},
+
+  {time:10,text:"Ke padh lega jahaan saara"},
+
+  {time:12,text:"Huaa na hoga ab koi"},
+
+  {time:15,text:"Yahan hum do sa dobara"},
+
+  {time:20,text:"Main duniya bhar ki taarifein"},
+
+  {time:23,text:"Tere sajde mein laaya hoon"},
+
+  {time:27,text:"Main tumse ishq karne ki"},
+
+  {time:32,text:"Ijaazat, Rab se laaya hoon"}
+
+];
+
+
+const audio = document.getElementById("song");
+const lyricBox = document.getElementById("currentLyric");
+const musicBtn = document.getElementById("musicBtn");
+const musicStatus = document.getElementById("musicStatus");
+
+
+function playSong(){
+
+  if(audio.paused){
+
+    audio.play()
+    .then(function(){
+
+      musicBtn.innerHTML="⏸️ Pause Song";
+      musicStatus.innerHTML="🎶 গান চলছে... ❤️";
+
+    })
+    .catch(function(){
+
+      musicStatus.innerHTML=
+      "⚠️ song.mp3 পাওয়া যাচ্ছে না।";
+
+    });
+
+  }else{
+
+    audio.pause();
+
+    musicBtn.innerHTML="🎵 Play Song";
+    musicStatus.innerHTML="গান থেমে আছে";
+
+  }
+
+}
+
+
+audio.addEventListener("timeupdate",function(){
+
+  let current=lyrics[0];
+
+  for(let i=0;i<lyrics.length;i++){
+
+    if(audio.currentTime>=lyrics[i].time){
+      current=lyrics[i];
+    }
+
+  }
+
+  lyricBox.textContent=current.text;
+
+});
+
+
+audio.addEventListener("ended",function(){
+
+  musicBtn.innerHTML="🎵 Play Song";
+  musicStatus.innerHTML="গান শেষ হয়েছে ❤️";
+  lyricBox.textContent="❤️ For you, Mahbuba ❤️";
+
+});
+
+
+function yesClicked(){
+
+  const phone="8801609223346";
+
+  const message=
+  "Hey ❤️ I saw your proposal page... Yes, I love you! 💗";
+
+  window.location.href=
+  "https://wa.me/"+phone+
+  "?text="+encodeURIComponent(message);
+
+}
+
+
+function thinkClicked(){
+
+  alert(
+    "🙈 ঠিক আছে... সময় নিয়ে ভাবো।\n\n"+
+    "আমি অপেক্ষায় থাকলাম ❤️"
+  );
+
+}
+
+</script>
+
+</body>
+</html>  color:#fff;
+  box-shadow:0 5px 20px rgba(255,76,155,.4);
+}
+
+.status{
+  margin-top:8px;
+  min-height:20px;
+  font-size:13px;
+  color:#ffd9ec;
+}
+
+.lyrics{
+  margin-top:18px;
+  min-height:105px;
+  padding:18px 12px;
+  border-radius:20px;
+  background:rgba(0,0,0,.18);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#currentLyric{
+  font-size:17px;
+  line-height:1.7;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:0 0 15px rgba(255,255,255,.5);
+  transition:.3s;
+}
+
+.footer{
+  margin-top:18px;
+  font-size:12px;
+  opacity:.65;
+}
+
+.heart{
+  position:fixed;
+  bottom:-30px;
+  animation:float 8s linear infinite;
+  opacity:0;
+  z-index:1;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0) scale(.7) rotate(0);
+    opacity:0;
+  }
+  15%{opacity:.8}
+  100%{
+    transform:translateY(-110vh) scale(1.3) rotate(360deg);
+    opacity:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart" style="left:8%;font-size:22px;animation-delay:0s">❤️</div>
+<div class="heart" style="left:25%;font-size:18px;animation-delay:2s">💗</div>
+<div class="heart" style="left:45%;font-size:25px;animation-delay:4s">💕</div>
+<div class="heart" style="left:68%;font-size:20px;animation-delay:1s">💖</div>
+<div class="heart" style="left:88%;font-size:24px;animation-delay:3s">❤️</div>
+
+<div class="card">
+
+  <div class="photo">
+    <img src="photo.jpg" alt="Mahbuba">
+  </div>
+
+  <h1>Mahbuba ❤️</h1>
+
+  <div class="subtitle">
+    This little page is only for you ✨
+  </div>
+
+  <div class="message">
+    কিছু মানুষ জীবনে হঠাৎ আসে,<br>
+    কিন্তু খুব সহজেই মনে জায়গা করে নেয়। 💗
+    <br><br>
+    তোমাকে নিয়ে আমার মনের কথাগুলো
+    হয়তো মুখে ঠিকভাবে বলা সম্ভব নয়...
+    তাই এই ছোট্ট পেজে রেখে দিলাম। 🌸
+  </div>
+
+  <div class="question">
+    Will you be mine? ❤️
+  </div>
+
+  <button class="yes" onclick="yesClicked()">
+    Yes, I will ❤️
+  </button>
+
+  <button class="think" onclick="thinkClicked()">
+    Let me think 🙈
+  </button>
+
+  <div class="music-box">
+
+    <h2>🎶 একটু গান শোনো</h2>
+
+    <button class="music-btn" id="musicBtn" onclick="playSong()">
+      🎵 Play Song
+    </button>
+
+    <div class="status" id="musicStatus">
+      Play চাপো এবং গান শুনো 🎧
+    </div>
+
+    <audio id="song" preload="auto">
+      <source src="./song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="lyrics">
+      <div id="currentLyric">
+        🎵 গান শুরু হলে lyrics আসবে...
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    Made with ❤️ for Mahbuba
+  </div>
+
+</div>
+
+<script>
+
+const lyrics = [
+
   {time:0,text:"Main likh doon aasmaan par ye"},
 
   {time:5,text:"Ke padh lega jahaan saara"},
