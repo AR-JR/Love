@@ -3,153 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Mahbuba ❤️</title>
 
 <style>
 *{
+  margin:0;
+  padding:0;
   box-sizing:border-box;
+  font-family:Arial,sans-serif;
 }
 
 body{
-  margin:0;
   min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  padding:20px;
   overflow:hidden;
-  font-family:Arial,sans-serif;
-  color:#fff;
-
   background:
-    radial-gradient(circle at 20% 10%,#ff9dcc,transparent 35%),
-    radial-gradient(circle at 80% 90%,#8b5cff,transparent 40%),
-    linear-gradient(135deg,#16001f,#3d064f,#11001b);
+    radial-gradient(circle at top,#8b5cf6,#4c1d95 45%,#16051f);
+  color:white;
 }
 
-/* CARD */
-
-.card{
-  width:100%;
-  max-width:450px;
-  max-height:94vh;
-  overflow-y:auto;
-
-  padding:30px 22px;
+.container{
+  width:92%;
+  max-width:430px;
+  padding:28px 22px;
   text-align:center;
-
-  border-radius:30px;
-
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:28px;
   background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.25);
-
   backdrop-filter:blur(18px);
-
-  box-shadow:
-    0 25px 70px rgba(0,0,0,.4);
-
-  position:relative;
-  z-index:5;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
 }
-
-.card::-webkit-scrollbar{
-  width:0;
-}
-
-/* PHOTO */
 
 .photo{
-  width:125px;
-  height:125px;
-  margin:auto;
-
-  border-radius:50%;
-  overflow:hidden;
-
-  border:4px solid #fff;
-
-  box-shadow:
-    0 0 30px rgba(255,255,255,.5);
-}
-
-.photo img{
-  width:100%;
-  height:100%;
+  width:115px;
+  height:115px;
   object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,.8);
+  box-shadow:0 0 30px rgba(255,105,180,.7);
+  margin-bottom:14px;
 }
-
-/* TITLE */
 
 h1{
-  margin:18px 0 5px;
-  font-size:34px;
+  font-size:28px;
+  margin-bottom:10px;
 }
 
-.subtitle{
-  color:#ffd6ec;
-  font-size:14px;
+.intro{
+  font-size:15px;
+  line-height:1.7;
+  opacity:.9;
+  margin-bottom:25px;
 }
 
-/* INTRO */
-
-.message{
-  margin-top:22px;
-  line-height:1.8;
-  font-size:16px;
-}
-
-/* CONVERSATION */
-
-.question{
-  margin:25px 0 15px;
-
-  min-height:85px;
-
+#message{
+  min-height:72px;
   display:flex;
-  align-items:center;
   justify-content:center;
-
-  padding:8px;
-
+  align-items:center;
   font-size:21px;
-  line-height:1.65;
   font-weight:bold;
+  line-height:1.5;
+  margin-bottom:20px;
 }
-
-.fade{
-  animation:fade .55s ease;
-}
-
-@keyframes fade{
-
-  from{
-    opacity:0;
-    transform:translateY(14px) scale(.98);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0) scale(1);
-  }
-
-}
-
-/* BUTTONS */
 
 button{
-  border:0;
-
-  padding:13px 20px;
-  margin:5px;
-
+  border:none;
+  padding:13px 22px;
   border-radius:30px;
-
-  font-size:15px;
-  font-weight:bold;
-
   cursor:pointer;
-
+  font-size:16px;
+  font-weight:bold;
+  margin:5px;
   transition:.25s;
 }
 
@@ -157,836 +84,296 @@ button:hover{
   transform:scale(1.06);
 }
 
-.next{
-  background:#ff4c9b;
-  color:#fff;
-
-  box-shadow:
-    0 5px 20px rgba(255,76,155,.4);
+#nextBtn{
+  background:white;
+  color:#6d28d9;
 }
 
 .yes{
-  background:#fff;
-  color:#e50073;
-
-  box-shadow:
-    0 5px 20px rgba(255,255,255,.25);
+  background:#22c55e;
+  color:white;
 }
 
 .think{
-  color:#fff;
-
-  background:rgba(255,255,255,.16);
-
-  border:1px solid rgba(255,255,255,.25);
+  background:#f59e0b;
+  color:white;
 }
-
-/* FINAL */
-
-.final-text{
-  color:#ffd6ec;
-  font-size:14px;
-  line-height:1.7;
-}
-
-/* MUSIC */
 
 .music-box{
-  margin-top:25px;
-  padding-top:20px;
-
-  border-top:
-    1px solid rgba(255,255,255,.2);
+  margin-top:24px;
+  padding:16px;
+  border-radius:20px;
+  background:rgba(0,0,0,.18);
 }
 
-.music-box h2{
-  font-size:20px;
-  margin:0 0 10px;
+.music-title{
+  font-size:14px;
+  opacity:.8;
+  margin-bottom:8px;
 }
 
-.music-btn{
-  background:#ff4c9b;
-  color:#fff;
-
-  box-shadow:
-    0 5px 20px rgba(255,76,155,.4);
+audio{
+  width:100%;
+  height:38px;
 }
-
-.status{
-  margin-top:8px;
-
-  min-height:20px;
-
-  font-size:13px;
-  color:#ffd9ec;
-}
-
-/* LYRICS */
 
 .lyrics{
-  margin-top:18px;
-
-  min-height:105px;
-  padding:18px 12px;
-
-  border-radius:20px;
-
-  background:rgba(0,0,0,.18);
-
+  margin-top:15px;
+  min-height:50px;
   display:flex;
-  justify-content:center;
   align-items:center;
-}
-
-#currentLyric{
+  justify-content:center;
   font-size:17px;
-  line-height:1.7;
-
   font-weight:bold;
-
-  color:#fff;
-
-  text-shadow:
-    0 0 15px rgba(255,255,255,.5);
-
+  color:#ffe4f2;
+  text-shadow:0 0 12px rgba(255,105,180,.8);
   transition:.3s;
 }
 
-.glow{
-  animation:
-    glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow{
-
-  from{
-    text-shadow:
-      0 0 10px #ff4c9b,
-      0 0 20px #ff4c9b;
-  }
-
-  to{
-    text-shadow:
-      0 0 25px #fff,
-      0 0 40px #ff4c9b;
-  }
-
-}
-
-/* FOOTER */
-
-.footer{
-  margin-top:18px;
-
-  font-size:12px;
-  opacity:.65;
-}
-
-/* FLOATING HEARTS */
-
 .heart{
   position:fixed;
-
   bottom:-30px;
-
-  animation:
-    float 8s linear infinite;
-
-  opacity:0;
-
-  z-index:1;
+  font-size:20px;
+  animation:float 7s linear infinite;
+  opacity:.7;
+  pointer-events:none;
 }
 
 @keyframes float{
-
   0%{
-    transform:
-      translateY(0)
-      scale(.7)
-      rotate(0);
-
+    transform:translateY(0) scale(.8);
     opacity:0;
   }
-
-  15%{
-    opacity:.8;
-  }
-
+  15%{opacity:.8}
   100%{
-    transform:
-      translateY(-110vh)
-      scale(1.3)
-      rotate(360deg);
-
+    transform:translateY(-110vh) scale(1.5);
     opacity:0;
   }
+}
 
+.hidden{
+  display:none;
 }
 </style>
 </head>
 
-
 <body>
 
-<!-- FLOATING HEARTS -->
+<div class="container">
 
-<div class="heart"
-     style="left:8%;font-size:22px;animation-delay:0s">
-❤️
-</div>
+  <img src="photo.jpg" class="photo" alt="Mahbuba">
 
-<div class="heart"
-     style="left:25%;font-size:18px;animation-delay:2s">
-💗
-</div>
+  <h1>Mahbuba ❤️</h1>
 
-<div class="heart"
-     style="left:45%;font-size:25px;animation-delay:4s">
-💕
-</div>
-
-<div class="heart"
-     style="left:68%;font-size:20px;animation-delay:1s">
-💖
-</div>
-
-<div class="heart"
-     style="left:88%;font-size:24px;animation-delay:3s">
-❤️
-</div>
-
-
-<!-- MAIN CARD -->
-
-<div class="card">
-
-  <!-- PHOTO -->
-
-  <div class="photo">
-    <img src="./photo.jpg" alt="Mahbuba">
+  <div class="intro">
+    কিছু কথা মুখে বলা যায় না...<br>
+    তাই আজ একটু অন্যভাবে বলছি। 🫀
   </div>
 
-
-  <!-- NAME -->
-
-  <h1>
-    Mahbuba ❤️
-  </h1>
-
-  <div class="subtitle">
-    This little page is only for you ✨
+  <div id="message">
+    তোমার সাথে আমার গল্পটা কি একটু অন্যরকম হতে পারে? 🌸
   </div>
 
-
-  <!-- INTRO -->
-
-  <div class="message">
-
-    কিছু মানুষ জীবনে হঠাৎ আসে,<br>
-
-    কিন্তু খুব সহজেই মনে জায়গা করে নেয়। 💗
-
-    <br><br>
-
-    তোমাকে নিয়ে আমার মনের কথাগুলো
-    হয়তো মুখে ঠিকভাবে বলা সম্ভব নয়...
-
-    <br>
-
-    তাই এই ছোট্ট পেজে
-    রেখে দিলাম। 🌸
-
+  <div id="buttons">
+    <button id="nextBtn" onclick="nextMessage()">একটু এগিয়ে আসো... 💜</button>
   </div>
-
-
-  <!-- ROMANTIC CONVERSATION -->
-
-  <div
-    class="question fade"
-    id="conversation">
-
-    একটা ছোট্ট কথা জিজ্ঞেস করি? 🫶
-
-  </div>
-
-
-  <button
-    class="next"
-    id="nextBtn"
-    onclick="nextConversation()">
-
-    বলো... 💗
-
-  </button>
-
-
-  <!-- FINAL BUTTONS -->
-
-  <div
-    id="finalButtons"
-    style="display:none">
-
-    <div
-      class="question fade">
-
-      তাহলে এবার তোমার মনের উত্তরটা কী? ❤️
-
-    </div>
-
-    <div class="final-text">
-
-      তাড়াহুড়ো করে নয়...<br>
-      মন থেকে উত্তর দিও। 🌸
-
-    </div>
-
-    <br>
-
-    <button
-      class="yes"
-      onclick="yesClicked()">
-
-      Yes ❤️
-
-    </button>
-
-    <button
-      class="think"
-      onclick="thinkClicked()">
-
-      Let me think 🙈
-
-    </button>
-
-  </div>
-
-
-  <!-- MUSIC -->
 
   <div class="music-box">
+    <div class="music-title">🎵 আমাদের কথাগুলোর সাথে একটু গান...</div>
 
-    <h2>
-      🎶 একটু গান শোনো
-    </h2>
-
-
-    <button
-      class="music-btn"
-      id="musicBtn"
-      onclick="playSong()">
-
-      🎵 Play Song
-
-    </button>
-
-
-    <div
-      class="status"
-      id="musicStatus">
-
-      Play চাপো এবং গান শুনো 🎧
-
-    </div>
-
-
-    <audio
-      id="song"
-      preload="auto">
-
-      <source
-        src="./song.mp3"
-        type="audio/mpeg">
-
+    <audio id="song" controls>
+      <source src="song.mp3" type="audio/mpeg">
+      তোমার ব্রাউজার অডিও সাপোর্ট করে না।
     </audio>
 
-
-    <!-- LYRICS -->
-
-    <div class="lyrics">
-
-      <div id="currentLyric">
-
-        🎵 গান শুরু হলে lyrics আসবে...
-
-      </div>
-
+    <div id="lyrics" class="lyrics">
+      🎶 গান শুরু হলে লিরিক্স এখানে আসবে...
     </div>
-
-  </div>
-
-
-  <div class="footer">
-
-    Made with ❤️ for Mahbuba
-
   </div>
 
 </div>
-
-
 
 <script>
 
-/* =================================================
-   ROMANTIC CONVERSATION
-================================================= */
+const messages = [
 
-const conversations = [
+  "তোমার সাথে আমার গল্পটা কি একটু অন্যরকম হতে পারে? 🌸",
 
-  {
-    text:
-      "একটা ছোট্ট কথা জিজ্ঞেস করি? 🫶",
+  "কিছু মানুষ জীবনে আসে... আর আসার পর সবকিছু একটু সুন্দর লাগে। ✨",
 
-    button:
-      "বলো... 💗"
-  },
+  "তুমি ঠিক তেমনই একজন।",
 
+  "তোমার সাথে কথা বললে সময়টা কোথায় চলে যায়, বুঝতেই পারি না। 🫀",
 
-  {
-    text:
-      "কখনো কি কোনো মানুষকে কোনো কারণ ছাড়াই বারবার মনে পড়ে? 🌸",
+  "Maybe you don't know... but you became a very special part of my thoughts. 💫",
 
-    button:
-      "Maybe... 🙈"
-  },
+  "তোমাকে নিয়ে আমার কথাগুলো যতটা বলা যায়, অনুভূতিটা তার থেকেও বেশি।",
 
+  "So today, I just want to ask you something... ❤️",
 
-  {
-    text:
-      "আমার কিন্তু একজনকে প্রায়ই মনে পড়ে... আর সেই মানুষটা তুমি। ❤️",
+  "তুমি কি আমার এই ছোট্ট গল্পটার সবচেয়ে সুন্দর অধ্যায় হবে? 🥹",
 
-    button:
-      "Really? 🥺"
-  },
-
-
-  {
-    text:
-      "তোমার একটা ছোট্ট message-ও কখনো কখনো পুরো দিনটা সুন্দর করে দেয়। ✨",
-
-    button:
-      "That's sweet... 💕"
-  },
-
-
-  {
-    text:
-      "You have a special place in my heart. 🫀",
-
-    button:
-      "সত্যি? 🙈"
-  },
-
-
-  {
-    text:
-      "হ্যাঁ... কারণ সবাই চোখে পড়ে, কিন্তু সবাই মনে থেকে যায় না। ❤️",
-
-    button:
-      "Why me? 🌸"
-  },
-
-
-  {
-    text:
-      "Maybe because my heart feels a little happier when you're around. 🫶",
-
-    button:
-      "Aww... 🥺"
-  },
-
-
-  {
-    text:
-      "তোমার সাথে কথা বললে সময়টা কোথায় চলে যায় বুঝতেই পারি না। ⏳",
-
-    button:
-      "Same here... 💗"
-  },
-
-
-  {
-    text:
-      "একটা secret বলি? 🤫",
-
-    button:
-      "Tell me... 👀"
-  },
-
-
-  {
-    text:
-      "Sometimes I smile at my phone for no reason... then I realize it's because of you. ❤️",
-
-    button:
-      "🙈 Really?"
-  },
-
-
-  {
-    text:
-      "তোমার হাসিটা হয়তো তোমার কাছে সাধারণ, কিন্তু আমার কাছে সেটা একটা সুন্দর অনুভূতি। 🌷",
-
-    button:
-      "So sweet... 💕"
-  },
-
-
-  {
-    text:
-      "I don't need a perfect story... I just want something real with you. ❤️",
-
-    button:
-      "That's deep... 🥺"
-  },
-
-
-  {
-    text:
-      "আমি জানি না ভবিষ্যতে কী লেখা আছে... কিন্তু তোমার সাথে সুন্দর কিছু মুহূর্ত লিখতে চাই। ✨",
-
-    button:
-      "I like that... 🫶"
-  },
-
-
-  {
-    text:
-      "And if you ever wonder who's thinking about you... just remember, it's me. ❤️",
-
-    button:
-      "Really? 🙈"
-  },
-
-
-  {
-    text:
-      "হয়তো তোমার জীবনের পুরো গল্প হতে পারব না...",
-
-    button:
-      "Then?"
-  },
-
-
-  {
-    text:
-      "But I'd love to be one of your favorite chapters. 📖❤️",
-
-    button:
-      "Aww... 🥺"
-  },
-
-
-  {
-    text:
-      "তোমাকে নিয়ে বলা কথা শেষ হয়ে যায়, কিন্তু তোমাকে নিয়ে ভাবনাগুলো শেষ হয় না। ♾️",
-
-    button:
-      "আর শেষ কথা? 💗"
-  },
-
-
-  {
-    text:
-      "If my heart had a favorite name... it would be yours. ❤️",
-
-    button:
-      "Mahbuba? 🥺"
-  },
-
-
-  {
-    text:
-      "হ্যাঁ... Mahbuba. কারণ কিছু নাম শুধু উচ্চারণ করা হয় না, অনুভব করা হয়। 🫀",
-
-    button:
-      "শেষ প্রশ্নটা করো... 🌸"
-  },
-
-
-  {
-    text:
-      "So, Mahbuba... will you keep a little place for me in your heart? ❤️",
-
-    button:
-      "My answer... 🫶"
-  }
+  "তাহলে... আমার এই অনুভূতিটাকে কি একটু জায়গা দেবে? 💜"
 
 ];
 
+let current = 0;
 
-let conversationIndex = 0;
+function nextMessage(){
 
+  current++;
 
-function nextConversation(){
+  if(current < messages.length){
 
-  const box =
-    document.getElementById("conversation");
+    document.getElementById("message").innerHTML =
+      messages[current];
 
-  const btn =
-    document.getElementById("nextBtn");
+    if(current === messages.length - 1){
 
+      document.getElementById("buttons").innerHTML = `
 
-  conversationIndex++;
+        <button class="yes" onclick="sayYes()">
+          Yes ❤️
+        </button>
 
+        <button class="think" onclick="think()">
+          Let me think 🙈
+        </button>
 
-  if(
-    conversationIndex <
-    conversations.length
-  ){
-
-    box.classList.remove("fade");
-
-    void box.offsetWidth;
-
-
-    box.textContent =
-      conversations[
-        conversationIndex
-      ].text;
-
-
-    box.classList.add("fade");
-
-
-    btn.textContent =
-      conversations[
-        conversationIndex
-      ].button;
-
-
-  }else{
-
-
-    box.classList.remove("fade");
-
-    void box.offsetWidth;
-
-
-    box.innerHTML =
-      "তাহলে... আমার প্রশ্নটার উত্তরটা কি ❤️" +
-      "<br><span style='font-size:14px;color:#ffd6ec'>" +
-      "তোমার মনের মতো করে দিও... 🌸" +
-      "</span>";
-
-
-    box.classList.add("fade");
-
-
-    btn.style.display =
-      "none";
-
-
-    document.getElementById(
-      "finalButtons"
-    ).style.display =
-      "block";
+      `;
+    }
 
   }
 
 }
 
+function sayYes(){
 
-/* =================================================
-   SONG + LYRICS
-================================================= */
+  const text =
+    "Mahbuba ❤️ আমি জানি না এই মুহূর্তটাকে কীভাবে সুন্দর করে বলব... শুধু জানি, তোমার উত্তরটা আমার কাছে অনেক বিশেষ। 🫀✨";
+
+  const url =
+    "https://wa.me/8801609223346?text=" +
+    encodeURIComponent(text);
+
+  window.open(url,"_blank");
+}
+
+function think(){
+
+  alert(
+    "ঠিক আছে 🙈 সময় নিয়ে ভাবো... তবে একটা কথা মনে রেখো, এই প্রশ্নটা সত্যি মন থেকেই করা। ❤️"
+  );
+
+}
+
+
+/* =========================
+   LYRICS SYSTEM
+========================= */
 
 const lyrics = [
 
   {
-    time:13,
+    time:0,
     text:"Main likh doon aasmaan par ye"
   },
 
   {
-    time:16,
+    time:12,
     text:"Ke padh lega jahaan saara"
   },
 
   {
-    time:21,
+    time:15,
     text:"Huaa na hoga ab koi"
   },
 
   {
-    time:26,
+    time:18,
     text:"Yahan hum do sa dobara"
   },
 
   {
-    time:30,
+    time:23,
     text:"Main duniya bhar ki taarifein"
   },
 
   {
-    time:33,
+    time:26,
     text:"Tere sajde mein laaya hoon"
+  },
+
+  {
+    time:30,
+    text:"Main tumse ishq karne ki"
+  },
+
+  {
+    time:33,
+    text:"Ijaazat, Rab se laaya hoon ❤️"
   }
 
 ];
 
+const song = document.getElementById("song");
+const lyricsBox = document.getElementById("lyrics");
 
-const audio =
-  document.getElementById("song");
+song.addEventListener("timeupdate", function(){
 
+  const currentTime = song.currentTime;
 
-const lyricBox =
-  document.getElementById("currentLyric");
+  let active = null;
 
+  for(let i = 0; i < lyrics.length; i++){
 
-const musicBtn =
-  document.getElementById("musicBtn");
-
-
-const musicStatus =
-  document.getElementById("musicStatus");
-
-
-function playSong(){
-
-  if(audio.paused){
-
-    audio.play()
-
-      .then(function(){
-
-        musicBtn.innerHTML =
-          "⏸️ Pause Song";
-
-        musicStatus.innerHTML =
-          "🎶 গান চলছে... ❤️";
-
-      })
-
-      .catch(function(){
-
-        musicStatus.innerHTML =
-          "⚠️ song.mp3 পাওয়া যাচ্ছে না।";
-
-      });
-
-
-  }else{
-
-    audio.pause();
-
-    musicBtn.innerHTML =
-      "🎵 Play Song";
-
-    musicStatus.innerHTML =
-      "গান থেমে আছে";
-
-  }
-
-}
-
-
-/* LYRICS TIMING */
-
-audio.addEventListener(
-  "timeupdate",
-  function(){
-
-    let current =
-      null;
-
-
-    for(
-      let i=0;
-      i<lyrics.length;
-      i++
-    ){
-
-      if(
-        audio.currentTime >=
-        lyrics[i].time
-      ){
-
-        current =
-          lyrics[i];
-
-      }
-
-    }
-
-
-    if(current){
-
-      lyricBox.textContent =
-        current.text;
-
+    if(currentTime >= lyrics[i].time){
+      active = lyrics[i];
     }
 
   }
-);
 
+  if(active){
 
-/* SONG END */
-
-audio.addEventListener(
-  "ended",
-  function(){
-
-    musicBtn.innerHTML =
-      "🎵 Play Song";
-
-
-    musicStatus.innerHTML =
-      "গান শেষ হয়েছে ❤️";
-
-
-    lyricBox.innerHTML =
-      "💖 কিছু অনুভূতি শেষ হয় না...<br>" +
-      "শুধু আরও গভীর হয়ে যায়।";
-
-
-    lyricBox.classList.add(
-      "glow"
-    );
+    lyricsBox.innerHTML = active.text;
 
   }
-);
+
+});
 
 
-/* =================================================
-   YES BUTTON → WHATSAPP
-================================================= */
+/* =========================
+   FLOATING HEARTS
+========================= */
 
-function yesClicked(){
+function createHeart(){
 
-  const phone =
-    "8801609223346";
+  const heart = document.createElement("div");
 
+  heart.className = "heart";
 
-  const message =
-    "তোমার প্রশ্নটার উত্তর আমার কাছে একটাই... ❤️";
+  heart.innerHTML =
+    ["❤️","💜","💗","💕","💖","✨"]
+    [Math.floor(Math.random()*6)];
 
+  heart.style.left =
+    Math.random()*100 + "vw";
 
-  window.location.href =
-    "https://wa.me/" +
-    phone +
-    "?text=" +
-    encodeURIComponent(
-      message
-    );
+  heart.style.animationDuration =
+    (5 + Math.random()*5) + "s";
 
-}
+  heart.style.fontSize =
+    (14 + Math.random()*18) + "px";
 
+  document.body.appendChild(heart);
 
-/* =================================================
-   THINK BUTTON
-================================================= */
-
-function thinkClicked(){
-
-  alert(
-    "🙈 ঠিক আছে...\n\n" +
-    "সময় নিয়ে ভাবো।\n" +
-    "কিছু সুন্দর সিদ্ধান্ত তাড়াহুড়ো করে নিতে হয় না। ❤️\n\n" +
-    "আমি অপেক্ষায় থাকলাম... 🌸"
-  );
+  setTimeout(()=>{
+    heart.remove();
+  },10000);
 
 }
+
+setInterval(createHeart,700);
 
 </script>
 
