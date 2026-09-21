@@ -51,7 +51,6 @@ button:active{transform:scale(.96)}
 </head>
 <body>
 <div class="bg"></div>
-
 <div class="card">
  <div class="heart">❤️</div>
  <div class="small">একটা কথা ছিল...</div>
@@ -72,17 +71,19 @@ button:active{transform:scale(.96)}
  <button id="think" onclick="thinkClick()">Let me think 🙈</button>
 
  <div id="result"></div>
+ <a id="wa" class="wa" href="#" target="_blank">💬 WhatsApp-এ উত্তর পাঠাও</a>
 
- <a id="wa" class="wa" href="#" target="_blank">
-   💬 WhatsApp-এ উত্তর পাঠাও
- </a>
+ <!-- গান বাটন -->
+ <h2>🎶 গান বাজাও</h2>
+ <button onclick="playSong()">Play Song.mp3 🎵</button>
 
  <div class="note">একটা ছোট্ট “Yes” হয়তো একটা সুন্দর গল্পের শুরু হতে পারে ✨</div>
 </div>
 
+<!-- গান ফাইল -->
+<audio id="song" src="song.mp3"></audio>
+
 <script>
-// এখানে তোমার WhatsApp নম্বর বসাও — country code সহ, + ছাড়া।
-// উদাহরণ: বাংলাদেশের 01XXXXXXXXX হলে 8801XXXXXXXXX
 const MY_WHATSAPP = "8801609223346";
 
 function yesClick(){
@@ -114,6 +115,13 @@ function makeHeart(){
  e.style.animationDuration=(3+Math.random()*3)+"s";
  document.body.appendChild(e);
  setTimeout(()=>e.remove(),6500);
+}
+
+// গান প্লে ফাংশন
+function playSong(){
+  const audio=document.getElementById("song");
+  audio.currentTime=0;
+  audio.play();
 }
 </script>
 </body>
