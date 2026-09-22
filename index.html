@@ -343,8 +343,10 @@ audio{
   >
     If I could write one feeling into the
     stars, it would simply be your name. ✨<br>
-    <b>Somewhere between a thought and a heartbeat,
-    you became special. ❤️</b>
+    <b>
+      Somewhere between a thought and a heartbeat,
+      you became special. ❤️
+    </b>
   </div>
 
   <!-- MUSIC -->
@@ -384,14 +386,7 @@ audio{
 <script>
 
 /* ================================
-   YOUR WHATSAPP NUMBER
-================================ */
-
-const phone = "8801609223346";
-
-
-/* ================================
-   YES → ALERT → WHATSAPP
+   YES → ALERT → FACEBOOK PAGE
 ================================ */
 
 function yesMessage(){
@@ -399,30 +394,16 @@ function yesMessage(){
   alert(
     "💖 You chose me!\n\n" +
     "Your answer just made this little page\n" +
-    aLittleMoreSpecial()
+    "a little more beautiful. ❤️"
   );
-
-  const message =
-    "Yes, I choose you ❤️\n\n" +
-    "I think you just made my heart smile. ✨";
 
   setTimeout(function(){
 
     window.location.href =
-      "https://wa.me/" +
-      phone +
-      "?text=" +
-      encodeURIComponent(message);
+      "https://www.facebook.com/profile.php?id=61594379322875";
 
   },500);
 
-}
-
-
-/* Small helper */
-
-function aLittleMoreSpecial(){
-  return "a little more beautiful. ❤️";
 }
 
 
